@@ -1,0 +1,2 @@
+# solarnode
+My Solar Node
