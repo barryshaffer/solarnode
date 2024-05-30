@@ -10,10 +10,10 @@ This project details the design and construction of a solar-powered Meshtastic n
 
 ## Components and Materials
 
-* **Meshtastic Device:** RAK19003 baseboard w/ RAK4631 core module (nRF52840)
+* **Meshtastic Device:** [RAK19003 baseboard w/ RAK4631 core module (nRF52840)](https://store.rakwireless.com/products/wisblock-meshtastic-starter-kit?variant=43683420799174)
 * **Solar Panel:** [4W Solar Panel from AliExpress](https://www.aliexpress.us/item/3256803265862880.html?ug_edm_item_id=3256803265862880&pdp_npi=4%40dis%21USD%21%2425.09%21%2424.34%21%21%21%21%21%402101fb1917149664568478412e92d3%2112000025853024091%21edm%21%21%21&tracelog=rowan&rowan_id1=pay_success_20221027_1_en_US_2024-05-05&rowan_msg_id=8350818769920656%249c185f10317945afb7a2615afb1b9b61&ck=in_edm_other&gatewayAdapt=glo2usa) This unit houses the controller and up to 6 18650 cells.
 * **Charge Controller:** Integrated into the solar pannel
-* **Battery:** 3 x 3000mAH 18650 lion batteries (rescued/harvested form a bad 4o cell leafblower battery)
+* **Battery:** 3 x 3000mAH 18650 lion batteries (rescued/harvested form a bad 4o cell leafblower battery) This may be overkill as the nRF52 sips power.
 * **Weatherproof Enclosure:** plastic pill box - may change to painted ABS to survive the AZ summers
 * **Mounting Hardware:** [Antenna Roll Bar Mount Bracket](https://www.amazon.com/dp/B0B8MS3TMN?psc=1&ref=ppx_yo2ov_dt_b_product_details)
 * **Cables and Connectors:** [25ft usb cable](https://www.amazon.com/dp/B0CQ4C2P3V?ref=ppx_yo2ov_dt_b_product_details&th=1),[USB C female socket](https://www.aliexpress.us/item/3256806029053310.html?spm=a2g0o.productlist.main.1.5403UKKPUKKPaI&algo_pvid=dc6a95c7-c578-418e-a764-d21567cb393d&algo_exp_id=dc6a95c7-c578-418e-a764-d21567cb393d-0&pdp_npi=4%40dis%21USD%211.60%211.60%21%21%211.60%211.60%21%402101fb1017170388456027409e790b%2112000036316053016%21sea%21US%214677208350%21&curPageLogUid=LK9XUclQLx3T&utparam-url=scene%3Asearch%7Cquery_from%3A) This may change.
