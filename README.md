@@ -5,7 +5,7 @@ This project details the design and construction of a solar-powered Meshtastic n
 ## Project Goals
 
 * **Reliable Off-Grid Communication:** Create a robust communication node that can function independently of traditional power sources.
-* **Optimized for Antenna Mast Deployment:** Design a system that is compact,lightweight, weather-resistant, and easily installable on an antenna mast. In my case, I'am depolying at the top of a mast comprised of fence top rail that I use to secure the end of my 133'EFHW antenna. The mast isn't very robust so light weight and low wind load were major considerations for my design. 
+* **Optimized for Antenna Mast Deployment:** Design a system that is compact,lightweight, weather-resistant, and easily installable on an antenna mast. In my case, I'm depolying at the top of a mast comprised of fence top rail that I use to secure the end of my 133'EFHW antenna. The mast isn't very robust so light weight and low wind load were major considerations for my design hence keeping batteries and solar pannel detatched and down at the base of the mast. 
 
 
 ## Components and Materials
@@ -20,7 +20,7 @@ This project details the design and construction of a solar-powered Meshtastic n
 
 ## Assembly and Installation
 
-1. **Wiring:** About the only wiring I did was to replace the 5x2mm barrel plug coming out of the solar pannel with a usb c type socket so that I only have to run a single usb cable down the mast. Usb allows and option to flash new firmware without pulling the down off the mast. - I have since learned (but not confirmed) that nRF52 devices support flashing over bluetooth. So my wiring could change to a simple 2 conductor wired straight from the batteries in the solar pannel to the battery connector of the RAK. It does seem silly to take a 3.6V battery buck boost it up to 5V then have the RAK convert it back down to 3.3v for the Radio. I do like the thought of that approach since it will let me monitor the battery levels and see how well the pannel is doing.  
+1. **Wiring:** About the only wiring I did was to replace the 5x2mm barrel plug coming out of the solar pannel with a usb c type socket so that I only have to run a single usb cable down the mast. Usb enables the option to flash new firmware without pulling the node down off the mast. - I have since learned (but not confirmed) that nRF52 devices support flashing over bluetooth. So my wiring could change to a simple 2 conductor wired straight from the batteries in the solar pannel to the battery connector of the RAK. It does seem silly to take a 3.6V battery buck boost it up to 5V then have the RAK convert it back down to 3.3v for the Radio. I do like the thought of that approach since it will let me monitor the battery levels and see how well the pannel is doing.  
 2. **Enclosure:** Mount the components inside the weatherproof enclosure, ensuring proper ventilation and secure connections.
 3. **Mast Mounting:** Attach the enclosure to the antenna mast using appropriate hardware. Consider the weight distribution and wind resistance for stability.
 
