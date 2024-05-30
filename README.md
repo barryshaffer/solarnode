@@ -34,8 +34,8 @@ This project details the design and construction of a solar-powered Meshtastic n
 
 ## Photos and Diagrams
 
-* Coming soon
-
+* ![on the bench](https://photos.app.goo.gl/cbnk2vZ3MRiK1GRD9)
+  
 ## Additional Notes
 
 * 
