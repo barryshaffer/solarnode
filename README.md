@@ -11,6 +11,8 @@ This project details the design and construction of a solar-powered Meshtastic n
 ## Components and Materials
 
 * **Meshtastic Device:** [RAK19003 baseboard w/ RAK4631 core module (nRF52840)](https://store.rakwireless.com/products/wisblock-meshtastic-starter-kit?variant=43683420799174)
+* **Antenna:** [RAK 5dBi Fiberglass Antenna](https://store.rakwireless.com/products/5dbi-fiber-glass-antenna-supports-863-870mhz?m=3&h=outdoor-antennas)
+* **Feedline:** [Ipex to N-type RG178](https://www.amazon.com/gp/product/B0C8M9NR3R/ref=ppx_od_dt_b_asin_title_s03?ie=UTF8&th=1)
 * **Solar Panel:** [4W Solar Panel from AliExpress](https://www.aliexpress.us/item/3256803265862880.html?ug_edm_item_id=3256803265862880&pdp_npi=4%40dis%21USD%21%2425.09%21%2424.34%21%21%21%21%21%402101fb1917149664568478412e92d3%2112000025853024091%21edm%21%21%21&tracelog=rowan&rowan_id1=pay_success_20221027_1_en_US_2024-05-05&rowan_msg_id=8350818769920656%249c185f10317945afb7a2615afb1b9b61&ck=in_edm_other&gatewayAdapt=glo2usa) This unit houses the controller and up to 6 18650 cells which would be absolute overkill for the power sipping nRF52 - but if you wanted to throw a bunch of sensors on the RAK or run a more power hungry unit like a T-beam supreme, this pannel should provide plenty of power. 
 * **Charge Controller:** Integrated into the solar pannel
 * **Battery:** 3 x 3000mAH 18650 lion batteries (rescued/harvested form a bad 4o cell leafblower battery) may still be overkill.
@@ -20,25 +22,22 @@ This project details the design and construction of a solar-powered Meshtastic n
 
 ## Assembly and Installation
 
-1. **Wiring:** About the only wiring I did was to replace the 5x2mm barrel plug coming out of the solar pannel with a usb c type socket so that I only have to run a single usb cable down the mast. Usb enables the option to flash new firmware without pulling the node down off the mast. - I have since learned (but not confirmed) that nRF52 devices support flashing over bluetooth. So my wiring could change to a simple 2 conductor wired straight from the batteries in the solar pannel to the battery connector of the RAK. It does seem silly to take a 3.6V battery buck boost it up to 5V then have the RAK convert it back down to 3.3v for the Radio. I do like the thought of that approach since it will let me monitor the battery levels and see how well the pannel is doing.  
-2. **Enclosure:** Mount the components inside the weatherproof enclosure, ensuring proper ventilation and secure connections.
-3. **Mast Mounting:** Attach the enclosure to the antenna mast using appropriate hardware. Consider the weight distribution and wind resistance for stability.
+1. **Wiring:** I replaced the 5x2mm barrel plug on the solar panel with a USB-C socket. This allows me to power the node with a single USB cable, which makes it easier to flash new firmware. I later learned that nRF52 devices can be flashed over Bluetooth, so, if confirmd,  I may change the wiring to a simple 2-conductor wire from the batteries to the RAK battery connector. This would allow me to monitor the battery levels and see how well the panel is doing.  
+2. **Enclosure:** The idea here is as small and light as possible, My approach is basically to mount the antenna to the mast and mount the radio direcly to the antenna. Coax is extremely lossy at these frequencies, and meshtastic radios have minuscule power output, so in order to make the most of the hi gain attenna the closer to zero you get with your feed line the better. The shortest connector I found was 4" so that's what I'm using. 
+3. **Mast Mounting:** I'm not happy with the 90 degree mount I'm using as it's designed for an NMO connector which is a lot bigger than the N-type on the antenna so I had to use a fender washer to make it secure. I may change the enclosure to something more robust and mout it to the mast with ubolts and mount the antenna to it. Like [this](https://www.lowes.com/pd/CANTEX-1-2-in-Combination-Connector-Schedule-40-PVC-Compatible-Schedule-80-PVC-Compatible-Conduit-Fitting/3274869) for example.
 
 ## Configuration and Testing
 
-1. **Meshtastic Setup:** Configure the Meshtastic device for your desired network settings (channels, frequencies, etc.).
-2. **Power Monitoring:** Observe the battery voltage and charging status to ensure the solar panel is providing adequate power.
-3. **Range Testing:** Test the communication range of the node in various conditions (weather, obstructions).
+1. **Meshtastic Setup:** configured to 'router' also added a secondary 'Admin' channel so I can change radio configurations over the mesh since my mast location is out of bluetooth range from my house. **IMPORTANT: do not disable bluetooth to try and save batteries on an nRF52 device** there is a firmware bug that will cause the radio to be unresponsive if bluetooth is disabed. My understanding is that the BT radio goes to sleep anyway so there shouldn't be much power lost keeping it enabled. 
+2. **Power Monitoring:** TBD
+3. **Range Testing:** TBD
 
 ## Photos and Diagrams
 
-* Include clear photos of your completed node from different angles.
-* If possible, provide a wiring diagram to illustrate the connections between components.
+* Coming soon
 
 ## Additional Notes
 
-* Discuss any challenges you faced during the build process and how you addressed them.
-* Offer suggestions for alternative components or design modifications.
-* Share your experiences with the node in real-world use.
+* 
 
 
