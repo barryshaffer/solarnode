@@ -35,6 +35,7 @@ This project details the design and construction of a solar-powered Meshtastic n
 ## Photos and Diagrams
 
 * ![on the bench](https://github.com/barryshaffer/solarnode/blob/main/images/PXL_20240527_150119438.MP.jpg)
+* more to come
   
 ## Additional Notes
 
